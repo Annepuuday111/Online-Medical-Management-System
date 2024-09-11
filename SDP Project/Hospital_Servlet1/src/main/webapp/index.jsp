@@ -297,7 +297,7 @@
                 </div>
                 <div class="auth-buttons">
                 	<div class="dropdown">
-                		<button class="dropbtn"><i class="fas fa-user"></i>Login</button>
+                		<button class="dropbtn"><i class="fas fa-user"></i> Login</button>
                 		<div class="dropdown-content"><br>
                 			<a href="admin_login.jsp"><i class="fas fa-user-shield"></i> Admin</a><br>
                 			<a href="doctor_login.jsp"><i class="fas fa-user-md"></i> Doctor</a><br>

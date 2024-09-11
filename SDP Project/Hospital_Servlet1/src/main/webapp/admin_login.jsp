@@ -17,108 +17,97 @@
         }
 
         header {
-            background-color: #ffffff;
-            padding: 15px 0;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
+        	background-color: #ffffff;
+        	padding: 10px 0;
+        	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    	}
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
+    	.container {
+        	width: 80%;
+        	margin: 0 auto;
+        	text-align: center;
+    	}
 
         .logo img {
-            max-width: 150px;
-        }
+        	height: 65px;
+        	width: auto;
+        	display: block;
+    	}
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        	display: flex;
+        	justify-content: space-between;
+        	align-items: center;
+    	}
 
-        nav a {
-            text-decoration: none;
-            color: #333333;
-            font-weight: bold;
-            margin: 0 15px;
-        }
+    	nav a {
+        	text-decoration: none;
+        	color: #333333;
+        	margin: 0 15px;
+        	font-weight: bold;
+    	}
 
-        .auth-buttons {
-            display: flex;
-            align-items: center;
-        }
+    	nav .auth-buttons a {
+        	color: #ffffff;
+        	background-color: #007BFF;
+        	padding: 8px 15px;
+        	border-radius: 5px;
+        	font-size: 14px;
+    	}
 
-        .auth-buttons a {
-            color: #ffffff;
-            background-color: #007BFF;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-left: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .auth-buttons a i {
-            margin-right: 8px;
-        }
-
-        .auth-buttons a.sign-in {
-            background-color: #555555;
-        }
-
-        /* Dropdown */
-        .dropdown {
-            position: relative;
-        }
+    	nav .auth-buttons a.sign-in {
+        	background-color: #555555;
+        	margin-left: 10px;
+    	}
 
         .dropbtn {
-            background-color: #555555;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
+        	background-color: #555555;
+        	color: white;
+        	padding: 8px 15px;
+        	border-radius: 5px;
+        	font-size: 14px;
+        	font-weight: bold;
+        	text-decoration: none;
+        	border: none;
+    	}
 
-        .dropbtn i {
-            margin-right: 8px;
-        }
+    	.dropdown {
+        	position: relative;
+        	display: inline-block;
+    	}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffffff;
-            min-width: 160px;
-            margin-top: 10px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            border-radius: 5px;
-        }
+    	.dropdown-content {
+        	display: none;
+        	position: absolute;
+        	background-color: #555555;
+        	min-width: 150px;
+        	margin-left: -35px;
+        	border-radius: 5px;
+        	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        	z-index: 1;
+    	}
 
-        .dropdown-content a {
-            color: #333333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 14px;
-            font-weight: bold;
-        }
+    	.dropdown-content a {
+        	color: black;
+        	padding: 12px 16px;
+        	text-decoration: none;
+        	display: block;
+        	font-size: 14px;
+        	font-weight: bold;
+    	}
 
-        .dropdown-content a:hover {
-            background-color: #f4f4f4;
-        }
+    	.dropdown-content a:hover {
+        	background-color: none;
+    	}
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    	.dropdown:hover .dropdown-content {
+        	display: block;
+    	}
 
-        /* Form Styling */
+    	.dropdown:hover .dropbtn {
+        	background-color: none;
+    	}
+
         .form-container {
             width: 100%;
             max-width: 400px;
@@ -144,6 +133,7 @@
             display: block;
             font-size: 14px;
             margin-bottom: 5px;
+            text-align: left;
             color: #333;
         }
 
@@ -189,10 +179,10 @@
         .message.text-danger {
             color: #dc3545;
         }
+        
     </style>
 </head>
 <body>
-    <!-- Header with Navigation -->
     <header>
         <div class="container">
             <nav>
@@ -203,19 +193,18 @@
                 <div class="auth-buttons">
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-user"></i> Login</button>
-                        <div class="dropdown-content">
-                            <a href="admin_login.jsp"><i class="fas fa-user-shield"></i> Admin</a>
-                            <a href="doctor_login.jsp"><i class="fas fa-user-md"></i> Doctor</a>
-                            <a href="user_login.jsp"><i class="fas fa-user"></i> User</a>
+                        <div class="dropdown-content"><br>
+                            <a href="admin_login.jsp"><i class="fas fa-user-shield"></i> Admin</a><br>
+                            <a href="doctor_login.jsp"><i class="fas fa-user-md"></i> Doctor</a><br>
+                            <a href="user_login.jsp"><i class="fas fa-user"></i> User</a><br>
                         </div>
                     </div>
-                    <a href="signup.jsp" class="sign-in"><i class="fas fa-user-plus"></i> Sign-Up</a>
+                    <a href="signup.jsp"><i class="fas fa-user-plus"></i> Sign-Up</a>
                 </div>
             </nav>
         </div>
     </header>
     
-    <!-- Admin Login Form -->
     <div class="container">
         <div class="form-container">
             <h3>Admin Login</h3>
@@ -232,12 +221,12 @@
             
             <form action="adminLogin" method="post">
                 <div class="form-group">
-                    <label>Email address</label>
-                    <input required name="email" type="email" class="form-control">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required class="form-control" placeholder="Enter your Email">
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input required name="password" type="password" class="form-control">
+                    <input type="password" name="password" required class="form-control" placeholder="Enter your Password">
                 </div>
                 <button type="submit" class="btn">Login</button>
             </form>
