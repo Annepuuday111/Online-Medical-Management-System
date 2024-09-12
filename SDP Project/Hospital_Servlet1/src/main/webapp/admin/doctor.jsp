@@ -4,7 +4,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Add Doctor</title>
@@ -72,11 +71,20 @@
             font-size: 20px;
             margin-right: 15px;
         }
+        
+        .sidebar ul li a span {
+            flex: 1;
+            text-align: left;
+        }
+        .sidebar ul li a:hover {
+            background-color: #34495e;
+            color: white;
+        }
 
         .content {
-            margin-left: 250px;
+            margin-left: 370px;
             padding: 20px;
-            width: calc(100% - 250px);
+            width: calc(80% - 250px);
             height: 100vh;
             overflow-y: auto;
         }
@@ -102,8 +110,8 @@
 
         .form-group i {
             position: absolute;
-            left: 15px;
-            top: 50%;
+            left: 28px;
+            top: 70%;
             transform: translateY(-50%);
             color: #6c757d;
         }
@@ -130,17 +138,16 @@
         }
         h3 {
             color: #333;
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 55px;
+            margin-top: 35px;
+            margin-bottom: 48px;
             text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
             <img src="images/logo.png" alt="Logo">
@@ -155,7 +162,6 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
     <div class="content">
     <h3>Add Doctor</h3>
         <div class="container-fluid">
@@ -180,11 +186,11 @@
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-user"></i>
                                         <label for="fullname" class="form-label">Full Name</label>
-                                        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Enter full name" required>
+                                        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Enter Full Name" required>
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-calendar-alt"></i>
-                                        <label for="dob" class="form-label">DOB</label>
+                                        <label for="dob" class="form-label">Date Of Birth</label>
                                         <input type="date" id="dob" name="dob" class="form-control" required>
                                     </div>
                                 </div>
@@ -192,7 +198,7 @@
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-graduation-cap"></i>
                                         <label for="qualification" class="form-label">Qualification</label>
-                                        <input type="text" id="qualification" name="qualification" class="form-control" placeholder="Enter qualification" required>
+                                        <input type="text" id="qualification" name="qualification" class="form-control" placeholder="Enter Qualification" required>
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-briefcase-medical"></i>
@@ -215,19 +221,19 @@
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-envelope"></i>
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" required>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required>
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-phone"></i>
-                                        <label for="mobno" class="form-label">Mobile No</label>
-                                        <input type="text" id="mobno" name="mobno" class="form-control" placeholder="Enter mobile number" required>
+                                        <label for="mobno" class="form-label">Mobile</label>
+                                        <input type="text" id="mobno" name="mobno" class="form-control" placeholder="Enter Mobile Number" required>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <i class="fa fa-lock"></i>
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" required>
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>

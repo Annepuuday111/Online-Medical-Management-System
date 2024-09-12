@@ -66,6 +66,14 @@
         .sidebar ul li a i {
             margin-right: 15px;
         }
+        .sidebar ul li a span {
+            flex: 1;
+            text-align: left;
+        }
+        .sidebar ul li a:hover {
+            background-color: #34495e;
+            color: white;
+        }
         .content {
             margin-left: 250px;
             padding: 20px;

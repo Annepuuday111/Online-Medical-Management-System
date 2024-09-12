@@ -21,6 +21,7 @@
             background-attachment: fixed;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
         .sidebar {
             width: 250px;
@@ -77,31 +78,49 @@
             color: white;
         }
         .container-fluid {
-            margin-left: 250px; /* Adjust based on sidebar width */
+            margin-left: 140px;
             padding: 20px;
+            
         }
         h3 {
             color: #333;
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 30px;
+            margin-top: 35px;
+            margin-bottom: 45px;
             text-align: center;
-        }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .form-container {
             display: flex;
-            justify-content: center; /* Center the form horizontally */
-            align-items: center; /* Center the form vertically */
-            height: 80vh; /* Adjust the height as needed */
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            
         }
         .form-card {
             width: 100%;
-            max-width: 600px; /* Adjust the max-width as needed */
+            max-width: 600px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+        .form-control-icon {
+            position: relative;
+        }
+        .form-control-icon i {
+            position: absolute;
+            top: 70%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #333;
+        }
+        .form-control {
+            padding-left: 40px;
+        }
+        .form-label {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -120,11 +139,11 @@
         </ul>
     </div>
 
-    <div class="container-fluid p-3">
+    <div class="container-fluid">
+    <!-- <h3>Edit Doctor Details</h3> -->
         <div class="form-container">
             <div class="form-card card">
                 <div class="card-body">
-                    <h3>Edit Doctor Details</h3>
                     <c:if test="${not empty errorMsg}">
                         <p class="fs-3 text-center text-danger">${errorMsg}</p>
                         <c:remove var="errorMsg" scope="session" />
@@ -141,16 +160,19 @@
                     %>
 
                     <form action="../updateDoctor" method="post">
-                        <div class="mb-3">
+                        <div class="mb-3 form-control-icon">
                             <label class="form-label">Full Name</label>
+                            <i class="fa fa-user"></i>
                             <input type="text" required name="fullname" class="form-control" value="<%=d.getFullName()%>">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 form-control-icon">
                             <label class="form-label">DOB</label>
+                            <i class="fa fa-calendar"></i>
                             <input type="date" value="<%=d.getDob()%>" required name="dob" class="form-control">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 form-control-icon">
                             <label class="form-label">Qualification</label>
+                            <i class="fa fa-graduation-cap"></i>
                             <input type="text" required name="qualification" class="form-control" value="<%=d.getQualification()%>">
                         </div>
                         <div class="mb-3">
@@ -168,16 +190,19 @@
                                 %>
                             </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 form-control-icon">
                             <label class="form-label">Email</label>
+                            <i class="fa fa-envelope"></i>
                             <input type="email" required name="email" class="form-control" value="<%=d.getEmail()%>">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Mob No</label>
+                        <div class="mb-3 form-control-icon">
+                            <label class="form-label">Mobile No</label>
+                            <i class="fa fa-phone"></i>
                             <input type="text" required name="mobno" class="form-control" value="<%=d.getMobNo()%>">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 form-control-icon">
                             <label class="form-label">Password</label>
+                            <i class="fa fa-lock"></i>
                             <input type="password" required name="password" class="form-control" value="<%=d.getPassword()%>">
                         </div>
                         <input type="hidden" name="id" value="<%=d.getId()%>">

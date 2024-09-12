@@ -171,6 +171,28 @@ public class AppointmentDao {
 
 		return f;
 	}
+	
+	public boolean deleteAppointmentById(int id) {
+	    boolean rowDeleted = false;
+	    try {
+	        String sql = "DELETE FROM appointments WHERE id=?";
+	        PreparedStatement ps = con.prepareStatement(sql);
+	        ps.setInt(1, id);
+	        
+	        rowDeleted = ps.executeUpdate() > 0;
+	        
+	        if (rowDeleted) {
+	            System.out.println("Appointment deleted successfully.");
+	        } else {
+	            System.out.println("No appointment found with ID: " + id);
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return rowDeleted;
+	}
+
+
 
 	public List<Appointment> getAllAppointment() {
 		List<Appointment> list = new ArrayList<Appointment>();

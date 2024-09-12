@@ -158,6 +158,7 @@
                             <th scope="col">Doctor Name</th>
                             <th scope="col">Address</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -179,6 +180,12 @@
                             <td><%=d.getFullName()%></td>
                             <td><%=ap.getAddress()%></td>
                             <td><%=ap.getStatus()%></td>
+                            <td>
+                                <form action="delete_appointment" method="post">
+                                    <input type="hidden" name="appointmentId" value="<%=ap.getId()%>">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                         <% 
                         } 

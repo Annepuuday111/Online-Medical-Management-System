@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>DeleteAppointmentServlet</servlet-name>
+  	<display-name>DeleteAppointmentServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.org.servlet.admin.DeleteAppointmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteAppointmentServlet</servlet-name>
+  	<url-pattern>/DeleteAppointmentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

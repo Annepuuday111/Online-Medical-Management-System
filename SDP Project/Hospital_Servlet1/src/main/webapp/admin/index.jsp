@@ -109,10 +109,10 @@
         }
         h3 {
             color: #333;
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 75px;
+            margin-top: 35px;
+            margin-bottom: 48px;
             text-align: center;
         }
         .modal-content {

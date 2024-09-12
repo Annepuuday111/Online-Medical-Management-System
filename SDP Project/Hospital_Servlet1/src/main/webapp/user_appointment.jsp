@@ -73,8 +73,13 @@ response.setDateHeader("Expires", 0);
             transition: background-color 0.3s ease;
             font-size: 16px;
         }
+        .sidebar ul li a span {
+            flex: 1;
+            text-align: left;
+        }
         .sidebar ul li a:hover {
-            background-color: #1abc9c;
+            background-color: #34495e;
+            color: white;
         }
         .sidebar ul li a i {
             margin-right: 15px;

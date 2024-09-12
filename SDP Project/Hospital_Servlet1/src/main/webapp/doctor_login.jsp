@@ -17,7 +17,7 @@
         }
 
         header {
-        	background-color: #ffffff;
+        	background-color: #2c3e50;
         	padding: 10px 0;
         	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     	}

@@ -14,7 +14,7 @@
     }
 
     header {
-        background-color: #ffffff;
+        background-color: #2c3e50;
         padding: 10px 0;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -81,7 +81,7 @@
 
     nav a {
         text-decoration: none;
-        color: #333333;
+        color: white;
         margin: 0 15px;
         font-weight: bold;
     }
@@ -118,7 +118,7 @@
     }
 
     .hero-text h1 {
-        color: #1a73e8;
+        color: lightblue;
         font-size: 50px;
         margin-bottom: 25px;
         margin-top: -90px;
@@ -226,13 +226,13 @@
         width: 100%;
         text-align: center;
         padding: 1px 0;
-        background-color: #ffffff;
+        background-color: #2c3e50;
         box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
         margin-top: 0;
     }
 
     footer p {
-        color: #666666;
+        color: white;
         font-size: 14px;
     }
 
@@ -313,7 +313,7 @@
     <div id="home" class="container section">
         <section class="hero">
             <div class="hero-text">
-                <h1>Medical Service Online For Patients</h1>
+                <h1 id="changing-text">Medical Service Online For Patients</h1>
                 <p>Access our medical services online, anywhere and anytime. Our platform provides comprehensive health solutions tailored to your needs.</p>
                 <a style="background-color: red;" href="user_login.jsp">Book Appointment</a>
             </div>
@@ -419,6 +419,20 @@
         document.addEventListener('DOMContentLoaded', function () {
             showSection('home');
         });
+        
+  
+        //Change the Text Color
+        const colors = ['blue', 'green', 'orange']; 
+        let currentColorIndex = 0;
+        
+        function changeTextColor() {
+            const h1Element = document.getElementById('changing-text');
+            h1Element.style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length; 
+        }
+
+        setInterval(changeTextColor, 2000); 
+        
     </script>
 </body>
 
